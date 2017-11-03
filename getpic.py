@@ -8,10 +8,9 @@ soup = BeautifulSoup(page, "html.parser")
 
 print(soup.title.text)
 """
-for link  in soup.findAll('a'):
-	#print(link.get('href'))
-	print(link.text)
+print(soup.findAll('a'))
 """
+
 print(soup.find('div', {"class":"ProfileHeaderCard"}).find('p').text)
 i=1
 for tweets in soup.findAll('div',{"class":"content"}):
