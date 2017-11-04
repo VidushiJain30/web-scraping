@@ -8,7 +8,9 @@ soup = BeautifulSoup(page, "html.parser")
 
 print(soup.title.text)
 """
-print(soup.findAll('a'))
+for link  in soup.findAll('a'):
+	print(link.get('href'))
+	print(link.text)
 """
 
 print(soup.find('div', {"class":"ProfileHeaderCard"}).find('p').text)
