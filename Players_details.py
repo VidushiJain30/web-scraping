@@ -9,9 +9,9 @@ def make_soup(url):
 
 playerdatasaved=""
 soup= make_soup("https://www.basketball-reference.com/players/a/")
-for record in soup.findAll('tr'):
+for record in soup.findAll('tbody'):
 	playerdata=""
-	for data in record.findAll('td'):
-		playerdata=playerdata+","+data.text
-	playerdatasaved= playerdatasaved+ "\n" +playerdata[1:]
+	for data in record.findAll('tr'):
+		playerdata=playerdata+"\n,"+data.text
+	playerdatasaved= playerdatasaved+ "\n" +"\t"+playerdata[1:]+"\n"+"\n"
 print(playerdatasaved)
