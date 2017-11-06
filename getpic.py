@@ -2,7 +2,8 @@ import urllib
 import urllib.request
 from bs4 import BeautifulSoup
 
-url= "https://twitter.com/BarackObama"
+print("Enter the username of person")
+url= "https://twitter.com/"+input()
 page= urllib.request.urlopen(url)
 soup = BeautifulSoup(page, "html.parser")
 
