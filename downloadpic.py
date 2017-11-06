@@ -12,7 +12,7 @@ print("Enter the term to be searched")
 term= input()
 """
 
-soup = make_soup("https://uwaterloo.ca")
+soup = make_soup("https://www.google.co.in/search?tbm=isch&source=hp&biw=811&bih=637&ei=iZUAWvW1Fo60vwTPj4-4Dg&&q=cars&oq=cars")
 for img in soup.findAll('img'):
 	temp=img.get('src')
 	if(temp[:1]=="/"):
