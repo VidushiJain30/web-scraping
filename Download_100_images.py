@@ -25,7 +25,6 @@ for t in soup.findAll("div", {"class": "rg_meta"}):
 for t in L:
 	filename=str(i)
 	i=i+1
-	imagefile= open(filename+"."+exe, 'wb')
-	imagefile.write(urllib.request.urlopen(link).read())
+	imagefile= open(filename+"."+t[1], 'wb')
+	imagefile.write(urllib.request.urlopen(t[0]).read())
 	imagefile.close()
-	
